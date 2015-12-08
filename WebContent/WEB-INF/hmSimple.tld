@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <description>A tag library exercising SimpleTag handlers.</description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>SimpleTagLibrary</short-name>
+    <uri>http://www.hsnc.com.simpletag</uri>      <!-- 将标签绑定到一个uri -->
+   <!-- 简单标签-->
+    <tag>
+        <name>showContent</name>
+		<tag-class>com.hm.web.simpletag.SimpleTagContent</tag-class>
+		<body-content>scriptless</body-content>  <!-- 不能写成JSP,因为JSP 2.1不建议在页面中写脚本代码 -->
+    </tag>
+    
+    <tag>
+        <name>repeat</name>
+		<tag-class>com.hm.web.simpletag.SimpleTagRepeat</tag-class>
+		<body-content>scriptless</body-content>  <!-- 不能写成JSP,因为JSP 2.1不建议在页面中写脚本代码 -->
+    </tag>
+    
+    <tag>
+        <name>alter</name>
+		<tag-class>com.hm.web.simpletag.SimpleTagAlter</tag-class>
+		<body-content>scriptless</body-content>  <!-- 不能写成JSP,因为JSP 2.1不建议在页面中写脚本代码 -->
+    </tag>
+ 
+ 	 <tag>
+        <name>showjsp</name>
+		<tag-class>com.hm.web.simpletag.SimpleTagJsp</tag-class>
+		<body-content>empty</body-content>  <!-- 不能写成JSP,因为JSP 2.1不建议在页面中写脚本代码 -->
+    </tag>
+    
+    <tag>
+        <name>repeat2</name>
+		<tag-class>com.hm.web.simpletag.SimpleTagProperty</tag-class>
+		<body-content>scriptless</body-content>  <!-- 不能写成JSP,因为JSP 2.1不建议在页面中写脚本代码 -->
+    	
+    	<attribute>  <!-- 声明属性 -->
+    		<name>count</name>
+    		<required>true</required>   <!-- 这个属性是必须的 -->
+    		<rtexprvalue>true</rtexprvalue>   <!-- 这个属性是true时，jsp页面的标签属性可以是表达式 -->
+    	</attribute>
+    	
+    	<attribute>  <!-- 声明属性 -->
+    		<name>date</name>
+    		<required>true</required>   <!-- 这个属性是必须的 -->
+    		<rtexprvalue>true</rtexprvalue>   <!-- 这个属性是true时，jsp页面的标签属性可以是表达式 -->
+    	</attribute>
+    </tag>
+</taglib>

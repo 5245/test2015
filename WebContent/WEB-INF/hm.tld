@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+    <description>A tag library exercising SimpleTag handlers.</description>
+    <tlib-version>1.0</tlib-version>
+    <short-name>SimpleTagLibrary</short-name>
+    <uri>http://www.hsnc.com</uri>      <!-- 将标签绑定到一个uri -->
+   <!-- 传统标签-->
+    <tag>
+        <name>viewIp</name>
+		<tag-class>com.hm.web.tag.ViewIpTag</tag-class>
+		<body-content>empty</body-content>  <!-- 有无标签体 -->
+    </tag>
+ 
+ 	 <tag>
+        <name>showContent</name>
+		<tag-class>com.hm.web.tag.ShowContentTag</tag-class>
+		<body-content>JSP</body-content>  <!-- 有无标签体 -->
+    </tag>
+    
+    <tag>
+        <name>showJsp</name>
+		<tag-class>com.hm.web.tag.ShowJspTag</tag-class>
+		<body-content>empty</body-content>  <!-- 有无标签体 -->
+    </tag>
+    
+     <tag>
+        <name>repeat</name>
+		<tag-class>com.hm.web.tag.RepeatContentTag</tag-class>
+		<body-content>JSP</body-content>  <!-- 有无标签体 -->
+		<attribute>
+			<description>接受参数num</description>
+			<name>num</name>
+			<required>false</required>
+			<rtexprvalue>false</rtexprvalue>
+		</attribute>
+    </tag>
+    
+    <tag>
+        <name>alter</name>
+		<tag-class>com.hm.web.tag.AlterContentTag</tag-class>
+		<body-content>JSP</body-content>  <!-- 有无标签体 -->
+    </tag>
+    
+</taglib>
